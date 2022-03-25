@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "lightDin";
+  src: url(./assets/fonts/lightDin.otf);
+}
+@font-face {
+  font-family: "regularDin";
+  src: url(./assets/fonts/regularDin.otf);
+}
+@font-face {
+  font-family: "boldDin";
+  src: url(./assets/fonts/boldDin.otf);
+}
+body {
+  margin: 0;
+  font-family: "lightDin" !important;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* padding: 2rem; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(5, 5, 5);
+}
+h1 {
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: 2rem !important;
+  margin-top: 6rem !important;
+  color: white;
+  text-align: center;
+  font-size: 32px !important;
+}
+h2 {
+  color: white;
+  font-size: 24px !important;
+  text-align: center;
+  margin-bottom: 2rem !important;
+}
+.pageContainer {
+  margin: 2rem;
+  /* width: 30%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  /* margin-bottom: 20vh; */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+
+  /* background-color: aquamarine; */
+}
+.options {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+  opacity: 0;
+  max-height: 0;
+}
+.options.show {
+  max-height: 9999px;
+  opacity: 1;
+  top: 0%;
+}
+
+.option {
+  cursor: pointer;
+  width: 15vw;
+  height: 40vh;
+  margin: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.801);
+  border: solid 2px rgb(252, 182, 51);
+  border-radius: 30px;
+  transition: ease-in 0.5s;
+}
+.option:hover {
+  background-color: orange;
+  border: solid 2px white;
+}
+.addForm {
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  opacity: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  transition: 0.7s;
+  max-height: 0;
+}
+
+.addForm.show {
+  max-height: 9999px;
+  min-height: 70%;
+  bottom: 30%;
+  opacity: 1;
+}
+.innerForm {
+  display: flex;
+  width: 40%;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px rgb(252, 182, 51);
+  border-radius: 30px;
+  min-height: 40vh;
+}
+.innerForm.search {
+  min-height: 20vh;
+}
+.addForm label {
+  font-size: 1.2rem;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.hint {
+  font-style: italic;
+  margin-top: 0;
+}
+.smallInput {
+  width: 25%;
+}
+button {
+  border: solid 2px orange;
+  border-radius: 0;
+
+  font-family: "boldDin";
+  padding: 0.4rem 1.5rem;
+  margin: 0 0.5rem;
+  transition: ease-in 0.5s;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+button:hover {
+  background-color: orange;
+  color: black;
+}
+
+input {
+  border: 0;
+  border-radius: 0;
+  background-color: #f6f6f6;
+  padding: 0.5rem;
+  margin: 0.7rem;
+  color: black;
+  margin-left: 0;
+}
+input:focus {
+  outline: none;
+}
+.error {
+  color: red;
+  margin-top: 0;
+}
+.loading {
+  position: relative;
+  width: 40vw;
+}
